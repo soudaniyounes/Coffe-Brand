@@ -1,0 +1,38 @@
+.menu{
+    background:$bg-light;
+
+    .heading{
+        text-align:center;
+        margin:1rem 0;  
+       @include title-text(5rem);        
+      }
+    .box-container{
+      @include  grid(30rem);
+       .box{
+        text-align: center;
+        padding:3rem 2rem;
+        border-radius: .5rem;
+        &:hover{
+            background: $white;
+            transform: translateY(-1rem);
+            box-shadow: $box-shadow;
+        }
+
+           img{
+            height:15rem;
+            margin-bottom: 2rem;
+           }
+        
+           h3{
+            @include title-text(2rem);
+           }
+          p{
+            @include graph-text(1.5rem);
+           }
+           a{
+            @extend %link-button;
+           }
+       }
+
+    }
+}

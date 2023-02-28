@@ -1,0 +1,44 @@
+.reviews{
+    background: $bg-light;
+    .heading{
+        text-align:center;
+        margin:1rem 0 3rem;  
+        @include title-text(3.5rem); 
+    }
+    .box-container{
+        text-align: center;
+        @include grid(30rem);
+
+        .box{
+            padding: 3rem 2rem;
+            margin-top: 1.5rem;
+            &:hover{
+                box-shadow: $box-shadow;
+                border-radius: .5rem;
+                background: $white;
+                transform: translateY(-2rem);
+            }
+            img{
+                height: 15rem;
+                width:15rem;
+                border-radius:50%;
+                margin-bottom:1.5rem;
+            }
+            h3{
+                @include title-text(2rem);
+                padding: 1rem 0;
+            }
+            p{
+                @include graph-text(1.5rem); 
+               }
+
+               .stars{
+                margin:2rem 0;
+                i{
+                    font-size: 1.6rem;
+                    color:$mainColor;
+                }
+               }
+        }
+    }
+}

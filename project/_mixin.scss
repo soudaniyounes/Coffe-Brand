@@ -1,0 +1,52 @@
+// mixins 
+@mixin grid($value){
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax($value,1fr));
+    gap:2rem;
+}
+
+@mixin title-text($size){
+    font-size: $size;
+    text-transform: capitalize;
+    color: $black;
+}
+@mixin graph-text($size){
+    font-size: $size;
+    line-height: 2;
+    color: $light-color;
+    margin-bottom: 0;
+}
+
+//nav bar tricks
+@mixin navBar(){
+    .icons .baricon {    
+        display: inline-block !important;
+
+        &.fa-times{
+            transform: rotate(180deg);
+        }
+    }
+
+    .nav{
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: $white;
+        flex-flow: column;
+        clip-path: polygon(0 0,100% 0,100% 0, 0 0);
+
+        &.active{
+            clip-path: polygon(0 0,100% 0,100% 100%, 0 100%);
+        }
+        a{
+            margin: 1rem 0;
+            padding: 0 2rem;
+            color: #222 !important;
+            &:hover{
+                background-color: $mainColor;
+                color: $white !important;
+            }
+        }
+    }
+}

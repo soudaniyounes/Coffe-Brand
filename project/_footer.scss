@@ -1,0 +1,72 @@
+// start newslatter
+.newslatter{
+    background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)) , url(../images/newsletter-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    h3{
+        font-size: 4rem;
+        text-transform: uppercase;
+        color: $white;
+    }
+    p{
+        font-size: 2rem;
+        padding:1rem 0;
+        color: $white;
+    }
+
+    form{
+        max-width: 60rem;
+        background-color: #fff;
+        display: flex;
+        margin: 1rem auto;
+        padding: 2rem;
+
+        .email{
+            width: 100%;
+            font-size: 1.6rem;
+            padding: 0 1.2rem;
+            border: none;   
+        }
+        .btn{
+            @extend %link-button;
+            margin-top: 0;
+        }
+    }
+
+}
+// start footer
+.footer{
+    text-align: center;
+    .logo{
+        color: #512a10;
+        font-size: 3rem;
+        font-weight: bold;
+        margin: 1rem 0;
+        i{
+         margin-right: .5rem;
+        }
+    }
+    .create{
+        @include title-text(1.7rem);
+        span{
+            text-decoration: underline !important;
+        }
+    }
+    .links{
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        i{
+            margin-right: .5rem;
+            padding: 1.4rem;
+            border: 0.1rem solid #512a10;
+            font-size: 1.6rem;
+            color: #512a10;
+
+            &:hover{
+                background-color: $mainColor;
+                color:$white;
+            }
+        }
+    }
+}

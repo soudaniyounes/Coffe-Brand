@@ -1,0 +1,64 @@
+.blogs{
+    background: $bg-light;
+ 
+    .heading{
+        text-align:center;
+        margin:2rem 0;  
+       @include title-text(5rem);  
+    }
+
+    .box-container{
+        @include grid(30rem);
+    }
+
+.box{
+    margin-top: 2.5rem;
+&:hover{
+    background: $white;
+    box-shadow: $box-shadow;
+    border-radius: .8rem;
+    .icons{
+        border-top:$border;
+    }
+    .image{
+        padding:2rem;
+    }
+}
+    .image{
+        height:22rem;
+        overflow: hidden;
+        img{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+        }
+    }
+    .content{
+        margin: 1rem 0 0;
+        text-align: center;
+        h3{
+            @include title-text(2rem);
+           }
+          p{
+            @include graph-text(1.5rem);
+           }
+           a{
+            @extend %link-button;
+           }
+           .icons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: $white;
+            padding: 1.5rem;
+            margin-top: 1rem;
+            i{
+                color: $mainColor;
+            }
+            span{
+                @include title-text(1.5rem);
+            }
+           }
+    }
+}
+}

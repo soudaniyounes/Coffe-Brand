@@ -1,0 +1,52 @@
+.gallery{
+    .heading{
+        text-align:center;
+        margin:1rem 0 3rem;  
+        @include title-text(5rem); 
+    }
+    .box-container{
+        @include grid(30rem);
+        
+        .box{
+            height:25rem;
+            position: relative;
+            overflow: hidden;
+            &:hover{
+                img{
+                    transform: translateY(-100%);
+                }
+                .content{                  
+                    border:$border;
+                    transform: translateY(0);
+                }
+            }
+            img{
+               height:100%;
+               width:100%;
+               object-fit: cover;
+            }
+            .content{
+                text-align: center;
+                background: #fff;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                transform: translateY(100%);
+                h3{
+                    @include title-text(2rem);
+                    padding: 1rem 0;
+                    margin-top: 0.8rem;
+                }
+                p{
+                    @include graph-text(1.5rem);
+                    margin-bottom:1.5rem; 
+                   }
+                   a{
+                    @extend %link-button;
+                   }
+            }
+        }
+    }
+}

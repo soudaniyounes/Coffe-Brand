@@ -1,0 +1,55 @@
+//media quiries for header & login form
+
+@media (max-width:991px){
+    html {
+        font-size: 55%;
+        scroll-padding-top: 8rem;
+    }
+    .header{
+        @include navBar();
+    }
+ 
+}
+
+
+@media ((min-width:768px )and (max-width:991px)){
+    .home {
+        h3{
+          width:500px;
+        }
+      }
+}
+
+
+@media (max-width:768px){
+.header{
+    padding:4rem 2rem;
+    &.active{
+        padding:2rem;
+    }
+
+    @include navBar();
+     
+    }
+
+    .contact{
+        .map{
+            height:25rem;
+        }
+    }
+}
+
+
+
+@media (max-width:450px){
+    html {
+        font-size: 55%;
+        scroll-padding-top: 8rem;
+    }
+    .login-form form .flex label{
+        font-size: 1.5rem;
+    }
+    .home {
+        text-align: center;
+    }
+}
